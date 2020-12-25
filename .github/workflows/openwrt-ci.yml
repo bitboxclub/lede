@@ -8,7 +8,9 @@
 name: OpenWrt-CI
 
 on:
-  [push]
+  push:
+    branches: main
+  workflow_dispatch:
 
 jobs:
 
