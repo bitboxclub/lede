@@ -53,6 +53,7 @@ jobs:
           #添加OpenClash 包
           cat >> feeds.conf.default <<EOF
           src-git OpenClash https://github.com/vernesong/OpenClash
+          EOF
 
           #更新feeds
           ./scripts/feeds update -a
