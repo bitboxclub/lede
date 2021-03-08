@@ -45,10 +45,10 @@ jobs:
       - name: Update feeds
         run: |
           #添加lienol for passwall 包
-          cat >> feeds.conf.default <<EOF
-          src-git kenzo https://github.com/kenzok8/openwrt-packages
-          src-git small https://github.com/kenzok8/small
-          EOF
+          #cat >> feeds.conf.default <<EOF
+          #src-git kenzo https://github.com/kenzok8/openwrt-packages
+          #src-git small https://github.com/kenzok8/small
+          #EOF
           
           #添加OpenClash 包
           cat >> feeds.conf.default <<EOF
