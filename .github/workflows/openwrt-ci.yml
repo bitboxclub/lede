@@ -12,6 +12,7 @@ on:
     branches: main
   workflow_dispatch:
   pull_request:
+    branches: main
 
 jobs:
 
@@ -44,6 +45,7 @@ jobs:
           df -h
       - name: Update feeds
         run: |
+          sed -i 's/#src/src/g' ./feeds.conf.default
           #添加lienol for passwall 包
           #cat >> feeds.conf.default <<EOF
           #src-git kenzo https://github.com/kenzok8/openwrt-packages
@@ -51,9 +53,9 @@ jobs:
           #EOF
           
           #添加OpenClash 包
-          cat >> feeds.conf.default <<EOF
-          src-git OpenClash https://github.com/vernesong/OpenClash
-          EOF
+          #cat >> feeds.conf.default <<EOF
+          #src-git OpenClash https://github.com/vernesong/OpenClash
+          #EOF
 
           #更新feeds
           ./scripts/feeds update -a
@@ -205,7 +207,6 @@ jobs:
           CONFIG_PACKAGE_luci-app-adguardhome=y
           CONFIG_PACKAGE_luci-app-smartdns=y
           #CONFIG_PACKAGE_luci-app-passwall=y
-          CONFIG_PACKAGE_luci-app-openclash=y
           CONFIG_PACKAGE_luci-app-unblockmusic=y
           #多播相关插件
           #CONFIG_PACKAGE_igmpproxy=y
