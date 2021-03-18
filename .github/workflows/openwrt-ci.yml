@@ -52,10 +52,10 @@ jobs:
           #src-git small https://github.com/kenzok8/small
           #EOF
           
-          #添加OpenClash 包
-          #cat >> feeds.conf.default <<EOF
-          #src-git OpenClash https://github.com/vernesong/OpenClash
-          #EOF
+          添加OpenClash 包
+          cat >> feeds.conf.default <<EOF
+          src-git OpenClash https://github.com/vernesong/OpenClash
+          EOF
 
           #更新feeds
           ./scripts/feeds update -a
@@ -207,6 +207,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-adguardhome=y
           CONFIG_PACKAGE_luci-app-smartdns=y
           #CONFIG_PACKAGE_luci-app-passwall=y
+          CONFIG_PACKAGE_luci-app-openclash=y
           CONFIG_PACKAGE_luci-app-unblockmusic=y
           #多播相关插件
           #CONFIG_PACKAGE_igmpproxy=y
