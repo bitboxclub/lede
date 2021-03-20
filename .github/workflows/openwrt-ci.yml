@@ -52,7 +52,7 @@ jobs:
           #src-git small https://github.com/kenzok8/small
           #EOF
           
-          添加OpenClash 包
+          #添加OpenClash 包
           cat >> feeds.conf.default <<EOF
           src-git OpenClash https://github.com/vernesong/OpenClash
           EOF
